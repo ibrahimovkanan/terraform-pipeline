@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
    backend "s3" {
-      bucket = "terraformbucket31"  
+      bucket = "vedre1"  
       key    = "gitaction/terraform.tfstate"
       region = "us-east-2"
    }

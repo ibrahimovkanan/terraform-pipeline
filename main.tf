@@ -173,8 +173,8 @@ resource "aws_instance" "app" {
 
   provisioner "remote-exec" { 
     inline = [
-      "sudo apt update",
-      "sudo apt upgrade -y",
+      "sudo apt-get update",
+      "sudo apt-get upgrade -y",
       "sudo apt install default-jre -y",
       "sudo apt install maven -y",
       "sudo apt install git -y",

@@ -136,7 +136,7 @@ resource "aws_instance" "mysql" {
     type = "ssh"
     host = self.public_ip
     user = "ubuntu"
-    private_key = file("/home/kanan/Desktop/Task3/testkanan.pem")
+    private_key = file("./testkanan.pem")
   }
 
   provisioner "file" {
@@ -168,7 +168,7 @@ resource "aws_instance" "app" {
     type = "ssh"
     host = self.public_ip
     user = "ubuntu"
-    private_key = file("/home/kanan/Desktop/Task3/testkanan.pem")
+    private_key = file("./testkanan.pem")
   }
 
   provisioner "remote-exec" { 

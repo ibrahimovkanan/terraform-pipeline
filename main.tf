@@ -173,11 +173,11 @@ resource "aws_instance" "app" {
 
   provisioner "remote-exec" { 
     inline = [
-      "sudo apt-get update",
-      "sudo apt-get upgrade -y",
-      "sudo apt install default-jre -y",
-      "sudo apt install maven -y",
-      "sudo apt install git -y",
+      "apt update",
+      "apt upgrade -y",
+      "apt install default-jre -y",
+      "apt install maven -y",
+      "apt install git -y",
       "git clone https://github.com/ibrahimovkanan/spring-petclinic.git",
       "cd spring-petclinic",
       "sudo sed -i 's/localhost/${aws_instance.mysql.private_ip}/g' src/main/resources/application-mysql.properties",

@@ -148,7 +148,7 @@ resource "aws_instance" "mysql" {
     inline = [
       "sudo apt-get update",
       "sudo apt-get upgrade -y",
-      "apt install mysql-server -y",
+      "sudo apt install mysql-server -y",
       "sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/mysql.conf.d/mysqld.cnf",
       "sudo service mysql restart",
       "sudo mysql < user.sql",

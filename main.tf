@@ -175,7 +175,7 @@ resource "aws_instance" "app" {
     inline = [
       "sudo apt-get update",
       "sudo apt-get upgrade -y",
-      "sudo apt-get install default-jre -y",
+      "apt install default-jre -y",
       "apt install maven -y",
       "sudo apt install git -y",
       "git clone https://github.com/ibrahimovkanan/spring-petclinic.git",
